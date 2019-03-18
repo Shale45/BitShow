@@ -1,0 +1,34 @@
+header {
+  background-color: #010d21;
+  padding: 30px;
+  .home {
+    display: inline-block;
+    color: wheat;
+    margin: 5px 0;
+  }
+  .right {
+    display: relative;
+    float: right;
+  }
+}
+
+@media (min-width: 576px) {
+  .home {
+    padding-left: 30px;
+  }
+
+  .right {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .home {
+    padding-left: 60px;
+  }
+
+  .right {
+    margin-right: 60px;
+    padding-top: 7px;
+  }
+}

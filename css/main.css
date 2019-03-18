@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+h1 {
+  text-align: center;
+  padding: 40px; }
+
+#main {
+  background-color: bisque;
+  padding: 0 20px 50px 20px; }
+
+.search-container {
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  text-align: left;
+  min-width: 16%;
+  z-index: 1; }
+  .search-container .search-list {
+    list-style-type: none; }
+    .search-container .search-list li {
+      color: #010d21;
+      background-color: white;
+      padding: 4px;
+      border-bottom: 1px solid black;
+      min-width: 200px; }
+    .search-container .search-list li:hover {
+      background-color: #0ef3f3; }
+
+.card {
+  padding: 10px;
+  margin: 20px auto;
+  border: 1px solid black;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
+
+.card-text {
+  text-align: center; }
+
+@media (min-width: 576px) {
+  .search-container {
+    right: 70px; } }
+@media (min-width: 992px) {
+  .search-container {
+    right: 100px; } }
+header {
+  background-color: #010d21;
+  padding: 30px; }
+  header .home {
+    display: inline-block;
+    color: wheat;
+    margin: 5px 0; }
+  header .right {
+    display: relative;
+    float: right; }
+
+@media (min-width: 576px) {
+  .home {
+    padding-left: 30px; }
+
+  .right {
+    margin-right: 30px; } }
+@media (min-width: 992px) {
+  .home {
+    padding-left: 60px; }
+
+  .right {
+    margin-right: 60px;
+    padding-top: 7px; } }
+footer {
+  background-color: #010d21;
+  padding: 30px; }
+  footer p {
+    text-align: center;
+    color: wheat;
+    font-size: 120%; }
+
+body {
+  background-color: bisque; }
+
+#single-main {
+  width: 60%;
+  margin: 0 auto; }
+  #single-main .card-body {
+    padding-left: 40px; }
+    #single-main .card-body .card-title {
+      padding: 5px; }
+  #single-main .card-text {
+    text-align: left; }
+  #single-main .single-text {
+    padding: 10px; }
+    #single-main .single-text h3 {
+      padding: 5px;
+      padding-top: 15px; }
+  #single-main #seasons ul {
+    list-style-type: square; }
+
+.single-footer {
+  margin-top: 40px; }
+
+/*# sourceMappingURL=main.css.map */

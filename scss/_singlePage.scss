@@ -1,0 +1,33 @@
+body {
+  background-color: bisque;
+}
+
+#single-main {
+  width: 60%;
+  margin: 0 auto;
+  .card-body {
+    padding-left: 40px;
+    .card-title {
+      padding: 5px;
+    }
+  }
+  .card-text {
+    text-align: left;
+  }
+  .single-text {
+    padding: 10px;
+    h3 {
+      padding: 5px;
+      padding-top: 15px;
+    }
+  }
+  #seasons {
+    ul {
+      list-style-type: square;
+    }
+  }
+}
+
+.single-footer {
+  margin-top: 40px;
+}
