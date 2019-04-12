@@ -10,17 +10,23 @@ $(document).ready(function () {
         let card = $('<div class="card" style="width: 19rem;"></div>');
         let img = $('<img class="card-img-top">');
         let cardBody = $('<div class="card-body"></div>');
-        let h3 = $('<h4 class="card-text"></h4>');
+        let h4 = $('<h4 class="card-text"></h4>');
 
-        link.attr("title", "Click for more information");
-        link.attr("id", element.id);
-        link.attr("href", "singlePage.html");
-        img.attr("src", element.image.medium).attr("alt", element.name);
-        card.append(img).append(cardBody);
-        h3.text(element.name);
-        link.append(h3);
-        cardBody.append(link);
+        link.attr({
+          "title": "Click for more information",
+          "id": element.id,
+          "href": "singlePage.html"
+        });
 
+        img.attr({
+          "src": element.image.medium,
+          "alt": element.name
+        });
+
+        h4.text(element.name);
+        cardBody.append(h4);
+        link.append(img).append(cardBody);
+        card.append(link);
         $(".row").append(card);
       };
     });
@@ -29,6 +35,7 @@ $(document).ready(function () {
 
 
 $(document).on("change keyup", ".form-control", function () {
+  
   let val = $(".form-control").val();
 
   const url = "http://api.tvmaze.com/search/shows?q=" + val;
@@ -44,12 +51,13 @@ $(document).on("change keyup", ".form-control", function () {
       let listItem = $("<li>");
       let link = $("<a>");
 
-      link.attr("href", "#");
-      link.attr("id", id);
-
-      listItem.text(title);
-      link.append(listItem);
-      $(".search-list").append(link);
+      link.attr({
+        "href": "singlePage.html",
+        "id": id
+      });
+      link.text(title);
+      listItem.append(link);
+      $(".search-list").append(listItem);
 
     });
   });
@@ -57,8 +65,8 @@ $(document).on("change keyup", ".form-control", function () {
 
 
 $(document).on("click", "a", function () {
+ 
   let id = $(this).attr("id");
-
   localStorage.setItem("id", id);
   location.replace("singlePage.html");
 });
